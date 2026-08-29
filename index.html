@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ViceBase — GTA VI Database</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid #24242d;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            height: 70px;
+
+            margin: auto;
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .logo span {
+            color: #ff4fa3;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 520px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    #512747,
+                    transparent 45%
+                ),
+                #0d0d12;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 8px 14px;
+
+            border-radius: 100px;
+
+            color: #ff75b7;
+
+            background: #ff4fa31a;
+
+            border: 1px solid #ff4fa34d;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 90px);
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #ff4fa3;
+        }
+
+        .hero p {
+            color: #aaa;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 20px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #ff4fa3;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #33333d;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           COUNTDOWN
+        ========================= */
+
+        .countdown-section {
+            max-width: 1000px;
+
+            margin: -60px auto 50px;
+
+            padding: 0 20px;
+
+            position: relative;
+        }
+
+        .countdown {
+            background: #16161f;
+
+            border: 1px solid #292934;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+        .countdown h2 {
+            margin-bottom: 20px;
+        }
+
+        .timer {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            min-width: 85px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background: #0e0e14;
+        }
+
+        .time-box strong {
+            display: block;
+
+            font-size: 28px;
+        }
+
+        .time-box small {
+            color: #777;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+
+        /* =========================
+           NEWS
+        ========================= */
+
+        .news-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .card {
+            background: #15151d;
+
+            border: 1px solid #292934;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+
+            border-color: #444450;
+        }
+
+        .fake-image {
+            height: 180px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #47213a,
+                    #15151d
+                );
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content small {
+            color: #ff5daa;
+        }
+
+        .card-content h3 {
+            margin: 8px 0;
+        }
+
+        .card-content p {
+            color: #888;
+
+            line-height: 1.5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           DATABASE NAVIGATION
+        ========================= */
+
+        .database-menu {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .database-button {
+            background: #15151d;
+
+            border: 1px solid #292934;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .database-button:hover {
+            transform: translateY(-3px);
+
+            border-color: #ff4fa3;
+        }
+
+        .database-button .icon {
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .database-button h3 {
+            margin-bottom: 5px;
+        }
+
+        .database-button p {
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           VEHICLES
+        ========================= */
+
+        .database-section {
+            display: none;
+        }
+
+        .database-section.active {
+            display: block;
+        }
+
+        .database-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .database-header h2 {
+            font-size: 28px;
+        }
+
+        .vehicle-count {
+            color: #777;
+        }
+
+        .search-box {
+            width: 100%;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            border: 1px solid #292934;
+
+            background: #15151d;
+
+            color: white;
+
+            outline: none;
+
+            margin-bottom: 15px;
+
+            font-size: 15px;
+        }
+
+        .search-box:focus {
+            border-color: #ff4fa3;
+        }
+
+        .filters {
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 25px;
+        }
+
+        .filter {
+            background: #15151d;
+
+            color: #999;
+
+            border: 1px solid #292934;
+
+            padding: 9px 14px;
+
+            border-radius: 100px;
+
+            cursor: pointer;
+        }
+
+        .filter.active {
+            background: #ff4fa3;
+
+            color: white;
+
+            border-color: #ff4fa3;
+        }
+
+        .vehicle-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+        .vehicle {
+            background: #15151d;
+
+            border: 1px solid #292934;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            transition: 0.2s;
+        }
+
+        .vehicle:hover {
+            transform: translateY(-3px);
+        }
+
+        .vehicle-image {
+            height: 150px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 55px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #252535,
+                    #15151d
+                );
+        }
+
+        .vehicle-info {
+            padding: 18px;
+        }
+
+        .vehicle-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .vehicle-info p {
+            color: #777;
+
+            font-size: 13px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 5px 8px;
+
+            border-radius: 6px;
+
+            background: #25252f;
+
+            color: #aaa;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           CHARACTERS
+        ========================= */
+
+        .character-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+        .character {
+            background: #15151d;
+
+            border: 1px solid #292934;
+
+            border-radius: 15px;
+
+            padding: 25px;
+        }
+
+        .character-icon {
+            font-size: 60px;
+
+            margin-bottom: 15px;
+        }
+
+        .character h3 {
+            margin-bottom: 6px;
+        }
+
+        .character p {
+            color: #777;
+
+            line-height: 1.5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MAP
+        ========================= */
+
+        .map {
+            height: 420px;
+
+            border-radius: 18px;
+
+            border: 1px solid #292934;
+
+            background:
+                radial-gradient(
+                    circle at 30% 30%,
+                    #244d42,
+                    transparent 20%
+                ),
+                radial-gradient(
+                    circle at 70% 60%,
+                    #4d3548,
+                    transparent 25%
+                ),
+                #15151d;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .map h3 {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .map p {
+            color: #888;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #24242d;
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            color: #666;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .news-grid,
+            .vehicle-grid,
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .database-menu {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            section {
+                padding: 50px 15px;
+            }
+        }
+
+        @media(max-width: 450px) {
+
+            .database-menu {
+                grid-template-columns: 1fr;
+            }
+
+            .time-box {
+                min-width: 70px;
+            }
+
+            .time-box strong {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            VICE<span>BASE</span>
+        </div>
+
+        <nav>
+
+            <a href="#news">
+                Новости
+            </a>
+
+            <a href="#database">
+                База
+            </a>
+
+            <a href="#vehicles">
+                Машины
+            </a>
+
+            <a href="#characters">
+                Персонажи
+            </a>
+
+            <a href="#map">
+                Карта
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            GTA VI DATABASE
+        </div>
+
+        <h1>
+            Welcome to
+            <br>
+            <span>Vice City</span>
+        </h1>
+
+        <p>
+            Новости, автомобили, персонажи,
+            карта и всё известное о GTA VI.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                href="#database"
+                class="button primary"
+            >
+                Открыть базу
+            </a>
+
+            <a
+                href="#map"
+                class="button secondary"
+            >
+                Карта
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<div class="countdown-section">
+
+    <div class="countdown">
+
+        <h2>
+            До выхода GTA VI
+        </h2>
+
+        <div class="timer">
+
+            <div class="time-box">
+                <strong id="days">0</strong>
+                <small>дней</small>
+            </div>
+
+            <div class="time-box">
+                <strong id="hours">0</strong>
+                <small>часов</small>
+            </div>
+
+            <div class="time-box">
+                <strong id="minutes">0</strong>
+                <small>минут</small>
+            </div>
+
+            <div class="time-box">
+                <strong id="seconds">0</strong>
+                <small>секунд</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     NEWS
+========================= -->
+
+<section id="news">
+
+    <div class="section-title">
+
+        <h2>
+            Последние новости
+        </h2>
+
+        <p>
+            Новости и обновления GTA VI
+        </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+        <div class="card">
+
+            <div class="fake-image">
+                🌴
+            </div>
+
+            <div class="card-content">
+
+                <small>
+                    NEWS
+                </small>
+
+                <h3>
+                    Добро пожаловать в Vice City
+                </h3>
+
+                <p>
+                    Всё, что известно о мире
+                    GTA VI.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="fake-image">
+                🚗
+            </div>
+
+            <div class="card-content">
+
+                <small>
+                    VEHICLES
+                </small>
+
+                <h3>
+                    Автомобили GTA VI
+                </h3>
+
+                <p>
+                    Собираем автомобили,
+                    замеченные в материалах игры.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="fake-image">
+                👩‍❤️‍👨
+            </div>
+
+            <div class="card-content">
+
+                <small>
+                    CHARACTERS
+                </small>
+
+                <h3>
+                    Jason & Lucia
+                </h3>
+
+                <p>
+                    Главные герои GTA VI.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DATABASE
+========================= -->
+
+<section id="database">
+
+    <div class="section-title">
+
+        <h2>
+            Database
+        </h2>
+
+        <p>
+            Выбери категорию
+        </p>
+
+    </div>
+
+
+    <div class="database-menu">
+
+        <div
+            class="database-button"
+            onclick="openDatabase('vehicles')"
+        >
+
+            <div class="icon">
+                🚗
+            </div>
+
+            <h3>
+                Vehicles
+            </h3>
+
+            <p>
+                Автомобили и транспорт
+            </p>
+
+        </div>
+
+
+        <div
+            class="database-button"
+            onclick="openDatabase('characters')"
+        >
+
+            <div class="icon">
+                👤
+            </div>
+
+            <h3>
+                Characters
+            </h3>
+
+            <p>
+                Персонажи игры
+            </p>
+
+        </div>
+
+
+        <div
+            class="database-button"
+            onclick="openDatabase('locations')"
+        >
+
+            <div class="icon">
+                📍
+            </div>
+
+            <h3>
+                Locations
+            </h3>
+
+            <p>
+                Города и места
+            </p>
+
+        </div>
+
+
+        <div
+            class="database-button"
+            onclick="openDatabase('weapons')"
+        >
+
+            <div class="icon">
+                🔫
+            </div>
+
+            <h3>
+                Weapons
+            </h3>
+
+            <p>
+                Оружие
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VEHICLES
+========================= -->
+
+<section
+    id="vehicles"
+    class="database-section"
+>
+
+    <div class="database-header">
+
+        <div>
+
+            <h2>
+                🚗 Vehicles
+            </h2>
+
+            <p class="vehicle-count">
+                Найдено:
+                <span id="vehicleCount">
+                    8
+                </span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <input
+        id="vehicleSearch"
+        class="search-box"
+        type="text"
+        placeholder="🔎 Поиск автомобиля..."
+    >
+
+
+    <div class="filters">
+
+        <button
+            class="filter active"
+            onclick="filterVehicles('all', this)"
+        >
+            Все
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterVehicles('car', this)"
+        >
+            Cars
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterVehicles('bike', this)"
+        >
+            Bikes
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterVehicles('boat', this)"
+        >
+            Boats
+        </button>
+
+    </div>
+
+
+    <div
+        class="vehicle-grid"
+        id="vehicleGrid"
+    >
+
+        <!-- VEHICLE 1 -->
+
+        <div
+            class="vehicle"
+            data-type="car"
+            data-name="sports car"
+        >
+
+            <div class="vehicle-image">
+                🏎️
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Sports Car
+                </h3>
+
+                <p>
+                    Спортивный автомобиль
+                </p>
+
+                <span class="tag">
+                    CAR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 2 -->
+
+        <div
+            class="vehicle"
+            data-type="car"
+            data-name="muscle car"
+        >
+
+            <div class="vehicle-image">
+                🚘
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Muscle Car
+                </h3>
+
+                <p>
+                    Американский muscle car
+                </p>
+
+                <span class="tag">
+                    CAR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 3 -->
+
+        <div
+            class="vehicle"
+            data-type="bike"
+            data-name="sport bike"
+        >
+
+            <div class="vehicle-image">
+                🏍️
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Sport Bike
+                </h3>
+
+                <p>
+                    Спортивный мотоцикл
+                </p>
+
+                <span class="tag">
+                    BIKE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 4 -->
+
+        <div
+            class="vehicle"
+            data-type="boat"
+            data-name="speed boat"
+        >
+
+            <div class="vehicle-image">
+                🚤
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Speed Boat
+                </h3>
+
+                <p>
+                    Быстроходный катер
+                </p>
+
+                <span class="tag">
+                    BOAT
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 5 -->
+
+        <div
+            class="vehicle"
+            data-type="car"
+            data-name="pickup truck"
+        >
+
+            <div class="vehicle-image">
+                🛻
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Pickup Truck
+                </h3>
+
+                <p>
+                    Пикап
+                </p>
+
+                <span class="tag">
+                    CAR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 6 -->
+
+        <div
+            class="vehicle"
+            data-type="bike"
+            data-name="chopper"
+        >
+
+            <div class="vehicle-image">
+                🏍️
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Chopper
+                </h3>
+
+                <p>
+                    Круизер
+                </p>
+
+                <span class="tag">
+                    BIKE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 7 -->
+
+        <div
+            class="vehicle"
+            data-type="car"
+            data-name="suv"
+        >
+
+            <div class="vehicle-image">
+                🚙
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    SUV
+                </h3>
+
+                <p>
+                    Внедорожник
+                </p>
+
+                <span class="tag">
+                    CAR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE 8 -->
+
+        <div
+            class="vehicle"
+            data-type="boat"
+            data-name="yacht"
+        >
+
+            <div class="vehicle-image">
+                🛥️
+            </div>
+
+            <div class="vehicle-info">
+
+                <h3>
+                    Yacht
+                </h3>
+
+                <p>
+                    Яхта
+                </p>
+
+                <span class="tag">
+                    BOAT
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHARACTERS
+========================= -->
+
+<section
+    id="characters"
+    class="database-section"
+>
+
+    <div class="section-title">
+
+        <h2>
+            👤 Characters
+        </h2>
+
+        <p>
+            Известные персонажи GTA VI
+        </p>
+
+    </div>
+
+
+    <div class="character-grid">
+
+        <div class="character">
+
+            <div class="character-icon">
+                👩
+            </div>
+
+            <h3>
+                Lucia
+            </h3>
+
+            <p>
+                Одна из главных героинь GTA VI.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                👨
+            </div>
+
+            <h3>
+                Jason
+            </h3>
+
+            <p>
+                Главный герой GTA VI.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                ❓
+            </div>
+
+            <h3>
+                Unknown
+            </h3>
+
+            <p>
+                Персонаж, информация о котором
+                пока неизвестна.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCATIONS
+========================= -->
+
+<section
+    id="locations"
+    class="database-section"
+>
+
+    <div class="section-title">
+
+        <h2>
+            📍 Locations
+        </h2>
+
+        <p>
+            Мир GTA VI
+        </p>
+
+    </div>
+
+
+    <div class="character-grid">
+
+        <div class="character">
+
+            <div class="character-icon">
+                🌴
+            </div>
+
+            <h3>
+                Vice City
+            </h3>
+
+            <p>
+                Главный город игры.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                🏝️
+            </div>
+
+            <h3>
+                Leonida Keys
+            </h3>
+
+            <p>
+                Островной регион.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                🌳
+            </div>
+
+            <h3>
+                Leonida
+            </h3>
+
+            <p>
+                Штат, в котором
+                происходит действие игры.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WEAPONS
+========================= -->
+
+<section
+    id="weapons"
+    class="database-section"
+>
+
+    <div class="section-title">
+
+        <h2>
+            🔫 Weapons
+        </h2>
+
+        <p>
+            Оружие и экипировка
+        </p>
+
+    </div>
+
+
+    <div class="character-grid">
+
+        <div class="character">
+
+            <div class="character-icon">
+                🔫
+            </div>
+
+            <h3>
+                Pistol
+            </h3>
+
+            <p>
+                Пистолет.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                🔫
+            </div>
+
+            <h3>
+                Shotgun
+            </h3>
+
+            <p>
+                Дробовик.
+            </p>
+
+        </div>
+
+
+        <div class="character">
+
+            <div class="character-icon">
+                ❓
+            </div>
+
+            <h3>
+                Unknown
+            </h3>
+
+            <p>
+                Информация будет добавлена
+                после подтверждения.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAP
+========================= -->
+
+<section id="map">
+
+    <div class="section-title">
+
+        <h2>
+            🗺️ Interactive Map
+        </h2>
+
+        <p>
+            Карта мира GTA VI
+        </p>
+
+    </div>
+
+
+    <div class="map">
+
+        <div>
+
+            <h3>
+                🌴 Vice City
+            </h3>
+
+            <p>
+                Интерактивная карта появится здесь.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        VICEBASE
+    </strong>
+
+    <br>
+    <br>
+
+    Fan-made GTA VI project.
+    Not affiliated with Rockstar Games.
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const releaseDate =
+    new Date(
+        "November 19, 2026 00:00:00"
+    ).getTime();
+
+
+function updateCountdown() {
+
+    const now =
+        new Date().getTime();
+
+    const distance =
+        releaseDate - now;
+
+
+    if (distance <= 0) {
+
+        document.getElementById("days")
+            .textContent = "0";
+
+        document.getElementById("hours")
+            .textContent = "0";
+
+        document.getElementById("minutes")
+            .textContent = "0";
+
+        document.getElementById("seconds")
+            .textContent = "0";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance %
+                (1000 * 60 * 60 * 24))
+            /
+            (1000 * 60 * 60)
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance %
+                (1000 * 60 * 60))
+            /
+            (1000 * 60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance %
+                (1000 * 60))
+            /
+            1000
+        );
+
+
+    document.getElementById("days")
+        .textContent = days;
+
+    document.getElementById("hours")
+        .textContent = hours;
+
+    document.getElementById("minutes")
+        .textContent = minutes;
+
+    document.getElementById("seconds")
+        .textContent = seconds;
+
+}
+
+
+updateCountdown();
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+
+/* =========================
+   DATABASE OPEN
+========================= */
+
+function openDatabase(type) {
+
+    const sections =
+        document.querySelectorAll(
+            ".database-section"
+        );
+
+
+    sections.forEach(
+        section => {
+
+            section.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    const target =
+        document.getElementById(
+            type
+        );
+
+
+    if (target) {
+
+        target.classList.add(
+            "active"
+        );
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+}
+
+
+
+/* =========================
+   VEHICLE FILTER
+========================= */
+
+let currentFilter = "all";
+
+
+function filterVehicles(
+    type,
+    button
+) {
+
+    currentFilter = type;
+
+
+    document
+        .querySelectorAll(".filter")
+        .forEach(
+            filter => {
+
+                filter.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+
+    button.classList.add(
+        "active"
+    );
+
+
+    updateVehicles();
+
+}
+
+
+
+/* =========================
+   VEHICLE SEARCH
+========================= */
+
+document
+    .getElementById("vehicleSearch")
+    .addEventListener(
+        "input",
+        updateVehicles
+    );
+
+
+function updateVehicles() {
+
+    const search =
+        document
+            .getElementById(
+                "vehicleSearch"
+            )
+            .value
+            .toLowerCase();
+
+
+    const vehicles =
+        document.querySelectorAll(
+            ".vehicle"
+        );
+
+
+    let visible = 0;
+
+
+    vehicles.forEach(
+        vehicle => {
+
+            const type =
+                vehicle.dataset.type;
+
+            const name =
+                vehicle.dataset.name;
+
+
+            const matchesType =
+                currentFilter === "all" ||
+                type === currentFilter;
+
+
+            const matchesSearch =
+                name.includes(search);
+
+
+            if (
+                matchesType &&
+                matchesSearch
+            ) {
+
+                vehicle.style.display =
+                    "block";
+
+                visible++;
+
+            } else {
+
+                vehicle.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+
+    document.getElementById(
+        "vehicleCount"
+    ).textContent = visible;
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
