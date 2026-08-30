@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>VICEBASE — GTA VI Database</title>
 
@@ -23,44 +29,42 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background: #08090d;
-    color: #ffffff;
+
+    color: white;
 
     line-height: 1.5;
-
-    padding-bottom: 0;
 }
-
-button,
-input {
-    font: inherit;
-}
-
-
-/* =========================
-   COLORS
-========================= */
 
 :root {
 
     --bg: #08090d;
+
     --card: #12141b;
+
     --card2: #171923;
 
     --border: #272a35;
 
     --text: #ffffff;
+
     --muted: #858894;
 
     --pink: #ff4fa3;
+
     --pink2: #ff78ba;
 
     --green: #70e3a0;
+
     --blue: #6faeff;
+
     --yellow: #e2b66d;
-    --red: #ff7070;
+
 }
 
 
@@ -77,7 +81,7 @@ header {
     z-index: 1000;
 
     background:
-        rgba(8, 9, 13, 0.86);
+        rgba(8,9,13,.88);
 
     backdrop-filter:
         blur(18px);
@@ -94,13 +98,15 @@ header {
 
     margin: auto;
 
-    padding: 0 20px;
+    padding:
+        0 20px;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 }
 
 .logo {
@@ -113,6 +119,7 @@ header {
 }
 
 .logo span {
+
     color: var(--pink);
 }
 
@@ -120,7 +127,7 @@ nav {
 
     display: flex;
 
-    gap: 25px;
+    gap: 24px;
 }
 
 nav a {
@@ -133,10 +140,11 @@ nav a {
 
     font-weight: 600;
 
-    transition: 0.2s;
+    transition: .2s;
 }
 
 nav a:hover {
+
     color: white;
 }
 
@@ -151,13 +159,16 @@ nav a:hover {
 
     display: flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    align-items: center;
+    align-items:
+        center;
 
     text-align: center;
 
-    padding: 80px 20px;
+    padding:
+        80px 20px;
 
     background:
 
@@ -177,152 +188,107 @@ nav a:hover {
 }
 
 .hero-content {
+
     max-width: 850px;
 }
 
 .hero small {
 
-    color: var(--pink2);
+    color:
+        var(--pink2);
 
-    font-weight: bold;
+    font-weight:
+        bold;
 
-    letter-spacing: 3px;
+    letter-spacing:
+        3px;
 }
 
 .hero h1 {
 
     font-size:
-        clamp(55px, 10vw, 105px);
+        clamp(55px,10vw,105px);
 
-    line-height: .88;
+    line-height:
+        .88;
 
-    letter-spacing: -5px;
+    letter-spacing:
+        -5px;
 
-    margin: 20px 0;
+    margin:
+        20px 0;
 }
 
 .hero h1 span {
-    color: var(--pink);
+
+    color:
+        var(--pink);
 }
 
 .hero p {
 
-    max-width: 680px;
+    max-width:
+        680px;
 
-    margin: auto;
+    margin:
+        auto;
 
-    color: #a4a7b2;
+    color:
+        #a4a7b2;
 
-    font-size: 18px;
+    font-size:
+        18px;
 }
 
 .buttons {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    gap: 12px;
+    gap:
+        12px;
 
-    margin-top: 30px;
+    margin-top:
+        30px;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 }
 
 .button {
 
-    border-radius: 12px;
+    border-radius:
+        12px;
 
-    padding: 14px 22px;
+    padding:
+        14px 22px;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    font-weight: bold;
+    font-weight:
+        bold;
 }
 
 .primary {
 
-    background: var(--pink);
+    background:
+        var(--pink);
 
-    color: white;
+    color:
+        white;
 }
 
 .secondary {
 
-    border: 1px solid #333641;
-
-    color: white;
-}
-
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-.countdown-container {
-
-    max-width: 900px;
-
-    margin: -60px auto 0;
-
-    padding: 0 20px;
-
-    position: relative;
-}
-
-.countdown {
-
-    background: var(--card);
-
     border:
-        1px solid var(--border);
+        1px solid #333641;
 
-    border-radius: 20px;
-
-    padding: 30px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.45);
-}
-
-.timer {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 20px;
-
-    flex-wrap: wrap;
-}
-
-.timer-box {
-
-    background: #0b0c11;
-
-    border-radius: 13px;
-
-    min-width: 95px;
-
-    padding: 14px;
-}
-
-.timer-box strong {
-
-    display: block;
-
-    font-size: 28px;
-}
-
-.timer-box span {
-
-    color: #777b86;
-
-    font-size: 11px;
+    color:
+        white;
 }
 
 
@@ -331,234 +297,95 @@ nav a:hover {
 ========================= */
 
 section {
-    padding: 80px 20px;
+
+    padding:
+        80px 20px;
 }
 
 .container {
 
-    max-width: 1200px;
+    max-width:
+        1200px;
 
-    margin: auto;
+    margin:
+        auto;
 }
 
 .section-title {
-    margin-bottom: 28px;
+
+    margin-bottom:
+        28px;
 }
 
 .section-title h2 {
-    font-size: 34px;
+
+    font-size:
+        34px;
 }
 
 .section-title p {
-    color: var(--muted);
+
+    color:
+        var(--muted);
 }
 
 
 /* =========================
-   SEARCH
+   IMAGE SYSTEM
 ========================= */
 
-.search-wrapper {
-
-    margin-bottom: 35px;
-
-    position: relative;
-}
-
-.global-search {
+.image-card {
 
     width: 100%;
 
-    padding: 17px 20px;
+    height: 100%;
 
-    border-radius: 14px;
+    object-fit:
+        cover;
 
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    color: white;
-
-    outline: none;
-
-    font-size: 15px;
+    display:
+        block;
 }
 
-.global-search:focus {
+.image-placeholder {
 
-    border-color:
-        var(--pink);
-}
+    width: 100%;
 
-.search-results {
+    height: 100%;
 
-    position: absolute;
+    display:
+        flex;
 
-    left: 0;
-    right: 0;
+    justify-content:
+        center;
 
-    top: 60px;
-
-    background: #11131a;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 14px;
-
-    overflow: hidden;
-
-    z-index: 20;
-
-    display: none;
-}
-
-.search-result {
-
-    padding: 14px 17px;
-
-    border-bottom:
-        1px solid #242731;
-
-    cursor: pointer;
-}
-
-.search-result:hover {
-    background: #191b24;
-}
-
-.search-result small {
-    color: var(--pink2);
-}
-
-.search-result p {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-
-/* =========================
-   STATS
-========================= */
-
-.stats-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 14px;
-
-    margin-bottom: 55px;
-}
-
-.stat {
-
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 16px;
-
-    padding: 20px;
-}
-
-.stat-number {
-
-    font-size: 32px;
-
-    font-weight: 900;
-
-    color: var(--pink);
-}
-
-.stat-label {
-
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   NEWS
-========================= */
-
-.news-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 17px;
-}
-
-.news-card {
-
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 17px;
-
-    overflow: hidden;
-
-    transition: .2s;
-}
-
-.news-card:hover {
-
-    transform:
-        translateY(-4px);
-
-    border-color:
-        #464a58;
-}
-
-.news-image {
-
-    height: 180px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 65px;
+    align-items:
+        center;
 
     background:
         linear-gradient(
             135deg,
-            #42233c,
-            #15161c
+            #282b36,
+            #111218
         );
+
+    color:
+        #777b86;
+
+    font-size:
+        14px;
+
+    text-align:
+        center;
+
+    padding:
+        20px;
 }
 
-.news-content {
-    padding: 19px;
-}
+.image-placeholder::before {
 
-.news-content small {
-    color: var(--pink2);
-}
-
-.news-content h3 {
-    margin-top: 5px;
-}
-
-.news-content p {
-
-    color: var(--muted);
-
-    margin-top: 7px;
-
-    font-size: 14px;
+    content:
+        "IMAGE";
 }
 
 
@@ -568,287 +395,105 @@ section {
 
 .database-grid {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(6, 1fr);
+        repeat(6,1fr);
 
-    gap: 13px;
+    gap:
+        13px;
 }
 
 .database-card {
 
-    position: relative;
-
-    background: var(--card);
+    background:
+        var(--card);
 
     border:
         1px solid var(--border);
 
-    border-radius: 16px;
+    border-radius:
+        16px;
 
-    padding: 20px;
+    overflow:
+        hidden;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
-    transition: .2s;
+    transition:
+        .2s;
 }
 
 .database-card:hover {
 
     transform:
-        translateY(-3px);
+        translateY(-4px);
 
     border-color:
         var(--pink);
 }
 
-.database-icon {
+.database-image {
 
-    font-size: 32px;
+    height:
+        120px;
 
-    margin-bottom: 12px;
+    overflow:
+        hidden;
+
+    background:
+        #15171e;
 }
 
-.database-card p {
+.database-image img {
 
-    color: var(--muted);
+    width:
+        100%;
 
-    font-size: 12px;
+    height:
+        100%;
 
-    margin-top: 3px;
+    object-fit:
+        cover;
+
+    transition:
+        .3s;
 }
 
-
-/* =========================
-   FAVORITE
-========================= */
-
-.favorite-button {
-
-    position: absolute;
-
-    top: 12px;
-
-    right: 12px;
-
-    width: 35px;
-
-    height: 35px;
-
-    border-radius: 10px;
-
-    border:
-        1px solid var(--border);
-
-    background: #0c0d12;
-
-    color: #777;
-
-    cursor: pointer;
-
-    font-size: 17px;
-}
-
-.favorite-button.active {
-
-    color: #ffd45e;
-
-    border-color:
-        #66572a;
-}
-
-
-/* =========================
-   VEHICLES
-========================= */
-
-#vehicles {
-    display: none;
-}
-
-.vehicle-tools {
-
-    display: flex;
-
-    gap: 10px;
-
-    margin-bottom: 18px;
-
-    flex-wrap: wrap;
-}
-
-.vehicle-search {
-
-    flex: 1;
-
-    min-width: 220px;
-
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    color: white;
-
-    padding: 14px;
-
-    border-radius: 12px;
-
-    outline: none;
-}
-
-.vehicle-search:focus {
-    border-color: var(--pink);
-}
-
-.filter {
-
-    border:
-        1px solid var(--border);
-
-    background: var(--card);
-
-    color: #888b96;
-
-    padding: 11px 16px;
-
-    border-radius: 100px;
-
-    cursor: pointer;
-}
-
-.filter.active {
-
-    background: var(--pink);
-
-    color: white;
-
-    border-color:
-        var(--pink);
-}
-
-.vehicle-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 15px;
-}
-
-.vehicle-card {
-
-    position: relative;
-
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 16px;
-
-    overflow: hidden;
-
-    transition: .2s;
-}
-
-.vehicle-card:hover {
+.database-card:hover
+.database-image img {
 
     transform:
-        translateY(-3px);
+        scale(1.05);
 }
 
-.vehicle-image {
+.database-info {
 
-    height: 145px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 58px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #34203a,
-            #111218
-        );
+    padding:
+        16px;
 }
 
-.vehicle-info {
-    padding: 17px;
+.database-info b {
+
+    display:
+        block;
+
+    font-size:
+        15px;
 }
 
-.vehicle-info h3 {
-    font-size: 17px;
-}
+.database-info p {
 
-.vehicle-info p {
+    color:
+        var(--muted);
 
-    color: var(--muted);
+    font-size:
+        12px;
 
-    font-size: 13px;
-}
-
-
-/* =========================
-   INTEL SYSTEM
-========================= */
-
-.intel {
-
-    margin-top: 10px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    padding: 5px 8px;
-
-    border-radius: 7px;
-
-    font-size: 10px;
-
-    font-weight: bold;
-}
-
-.intel-official {
-
-    color: var(--green);
-
-    background:
-        rgba(60,200,120,.1);
-}
-
-.intel-observed {
-
-    color: var(--blue);
-
-    background:
-        rgba(80,140,255,.1);
-}
-
-.intel-reported {
-
-    color: var(--yellow);
-
-    background:
-        rgba(220,170,80,.1);
-}
-
-.intel-rumor {
-
-    color: #ff9d70;
-
-    background:
-        rgba(255,120,70,.1);
+    margin-top:
+        3px;
 }
 
 
@@ -858,73 +503,448 @@ section {
 
 .characters-grid {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3,1fr);
 
-    gap: 16px;
+    gap:
+        16px;
 }
 
 .character-card {
 
-    position: relative;
+    position:
+        relative;
 
-    background: var(--card);
+    background:
+        var(--card);
 
     border:
         1px solid var(--border);
 
-    border-radius: 17px;
+    border-radius:
+        18px;
 
-    padding: 23px;
+    overflow:
+        hidden;
+
+    transition:
+        .2s;
 }
 
-.character-avatar {
+.character-card:hover {
 
-    font-size: 65px;
+    transform:
+        translateY(-4px);
 
-    margin-bottom: 12px;
+    border-color:
+        #444856;
 }
 
-.character-card p {
+.character-image {
 
-    color: var(--muted);
+    height:
+        300px;
 
-    font-size: 14px;
+    background:
+        #15171e;
+}
 
-    margin-top: 6px;
+.character-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+.character-info {
+
+    padding:
+        20px;
+}
+
+.character-info h3 {
+
+    font-size:
+        22px;
+}
+
+.character-info p {
+
+    color:
+        var(--muted);
+
+    margin-top:
+        6px;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================
-   FAVORITES
+   VEHICLES
 ========================= */
 
-.favorites-empty {
+.vehicle-tools {
 
-    background: var(--card);
+    display:
+        flex;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        20px;
+
+    flex-wrap:
+        wrap;
+}
+
+.vehicle-search,
+.music-search {
+
+    flex:
+        1;
+
+    min-width:
+        220px;
+
+    background:
+        var(--card);
 
     border:
         1px solid var(--border);
 
-    border-radius: 16px;
+    color:
+        white;
 
-    padding: 35px;
+    padding:
+        14px;
 
-    text-align: center;
+    border-radius:
+        12px;
 
-    color: var(--muted);
+    outline:
+        none;
 }
 
-.favorite-list {
+.vehicle-search:focus,
+.music-search:focus {
 
-    display: grid;
+    border-color:
+        var(--pink);
+}
+
+.filter {
+
+    border:
+        1px solid var(--border);
+
+    background:
+        var(--card);
+
+    color:
+        #888b96;
+
+    padding:
+        11px 16px;
+
+    border-radius:
+        100px;
+
+    cursor:
+        pointer;
+}
+
+.filter.active {
+
+    background:
+        var(--pink);
+
+    color:
+        white;
+
+    border-color:
+        var(--pink);
+}
+
+.vehicle-grid {
+
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4,1fr);
 
-    gap: 15px;
+    gap:
+        15px;
+}
+
+.vehicle-card {
+
+    position:
+        relative;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        17px;
+
+    overflow:
+        hidden;
+
+    transition:
+        .2s;
+}
+
+.vehicle-card:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+.vehicle-image {
+
+    height:
+        190px;
+
+    background:
+        #15171e;
+}
+
+.vehicle-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+.vehicle-info {
+
+    padding:
+        17px;
+}
+
+.vehicle-info h3 {
+
+    font-size:
+        17px;
+}
+
+.vehicle-info p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    margin-top:
+        2px;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        16px;
+}
+
+.music-card {
+
+    position:
+        relative;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    overflow:
+        hidden;
+
+    transition:
+        .2s;
+}
+
+.music-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #444856;
+}
+
+.music-image {
+
+    height:
+        210px;
+
+    background:
+        #15171e;
+}
+
+.music-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+.music-info {
+
+    padding:
+        20px;
+}
+
+.music-info h3 {
+
+    font-size:
+        20px;
+}
+
+.music-artist {
+
+    color:
+        #a7aab4;
+
+    margin-top:
+        4px;
+}
+
+.music-meta {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        14px;
+}
+
+.tag {
+
+    padding:
+        5px 8px;
+
+    border-radius:
+        7px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+}
+
+.tag-pink {
+
+    color:
+        var(--pink2);
+
+    background:
+        rgba(255,79,163,.1);
+}
+
+.tag-green {
+
+    color:
+        var(--green);
+
+    background:
+        rgba(60,200,120,.1);
+}
+
+
+/* =========================
+   FAVORITE
+========================= */
+
+.favorite-button {
+
+    position:
+        absolute;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    z-index:
+        5;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(5,6,9,.8);
+
+    color:
+        #777;
+
+    cursor:
+        pointer;
+
+    font-size:
+        18px;
+}
+
+.favorite-button.active {
+
+    color:
+        #ffd45e;
 }
 
 
@@ -934,44 +954,65 @@ section {
 
 .map {
 
-    height: 420px;
-
-    border-radius: 20px;
+    height:
+        420px;
 
     border:
         1px solid var(--border);
 
-    display: flex;
+    border-radius:
+        20px;
 
-    justify-content: center;
+    overflow:
+        hidden;
 
-    align-items: center;
+    position:
+        relative;
+}
 
-    text-align: center;
+.map img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+.map-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
 
     background:
-
-        radial-gradient(
-            circle at 20% 30%,
-            #24554b,
-            transparent 18%
-        ),
-
-        radial-gradient(
-            circle at 75% 65%,
-            #60314f,
-            transparent 25%
-        ),
-
-        #11151a;
+        rgba(0,0,0,.25);
 }
 
-.map h3 {
-    font-size: 38px;
-}
+.map-overlay h3 {
 
-.map p {
-    color: #888b95;
+    font-size:
+        40px;
+
+    text-shadow:
+        0 3px 20px black;
 }
 
 
@@ -984,157 +1025,153 @@ footer {
     border-top:
         1px solid #22242d;
 
-    padding: 45px 20px;
+    padding:
+        45px 20px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    color: #666a75;
+    color:
+        #666a75;
 }
 
 footer strong {
-    color: white;
+
+    color:
+        white;
 }
 
 
 /* =========================
-   MOBILE NAV
+   MOBILE
 ========================= */
 
 .mobile-nav {
 
-    display: none;
+    display:
+        none;
 }
 
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width: 1000px) {
+@media(max-width:1000px) {
 
     .database-grid {
+
         grid-template-columns:
-            repeat(3, 1fr);
+            repeat(3,1fr);
     }
 
     .vehicle-grid {
+
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2,1fr);
     }
 
-    .stats-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
+    .music-grid {
 
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 }
 
-
-@media(max-width: 700px) {
+@media(max-width:700px) {
 
     body {
-        padding-bottom: 70px;
+
+        padding-bottom:
+            70px;
     }
 
     nav {
-        display: none;
+
+        display:
+            none;
     }
 
-    .news-grid,
     .characters-grid,
-    .favorite-list {
-        grid-template-columns: 1fr;
+    .music-grid {
+
+        grid-template-columns:
+            1fr;
     }
 
     .database-grid {
+
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2,1fr);
     }
 
-    .hero h1 {
-        letter-spacing: -3px;
+    .vehicle-grid {
+
+        grid-template-columns:
+            1fr;
     }
 
     .mobile-nav {
 
-        display: flex;
+        display:
+            flex;
 
-        position: fixed;
+        position:
+            fixed;
 
-        bottom: 0;
+        left:
+            0;
 
-        left: 0;
+        right:
+            0;
 
-        right: 0;
+        bottom:
+            0;
 
-        height: 65px;
+        height:
+            65px;
+
+        z-index:
+            1000;
 
         background:
-            rgba(12,13,18,.95);
-
-        backdrop-filter:
-            blur(18px);
+            rgba(12,13,18,.96);
 
         border-top:
             1px solid var(--border);
 
-        z-index: 1000;
-
         justify-content:
             space-around;
 
-        align-items: center;
+        align-items:
+            center;
     }
 
     .mobile-nav a {
 
-        color: #777b86;
+        color:
+            #777b86;
 
-        text-decoration: none;
+        text-decoration:
+            none;
 
-        font-size: 11px;
+        font-size:
+            10px;
 
-        text-align: center;
+        text-align:
+            center;
     }
 
-    .mobile-nav a span {
+    .mobile-nav span {
 
-        display: block;
+        display:
+            block;
 
-        font-size: 20px;
+        font-size:
+            19px;
 
-        margin-bottom: 2px;
+        margin-bottom:
+            2px;
     }
-
-}
-
-
-@media(max-width: 450px) {
-
-    .vehicle-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .database-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .timer-box {
-        min-width: 70px;
-    }
-
-    .timer-box strong {
-        font-size: 22px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
 }
 
 </style>
+
 </head>
 
 
@@ -1161,6 +1198,10 @@ News
 
 <a href="#database">
 Database
+</a>
+
+<a href="#music">
+Music
 </a>
 
 <a href="#vehicles">
@@ -1195,21 +1236,15 @@ THE GTA VI DATABASE
 </small>
 
 <h1>
-
 WELCOME TO
-
 <br>
-
 <span>VICE CITY</span>
-
 </h1>
 
 <p>
-
-News, vehicles, characters, locations
-and everything we know about
-Grand Theft Auto VI.
-
+News, vehicles, characters, music,
+locations and everything we know
+about Grand Theft Auto VI.
 </p>
 
 <div class="buttons">
@@ -1223,209 +1258,10 @@ EXPLORE DATABASE
 
 <a
 class="button secondary"
-href="#news"
+href="#music"
 >
-LATEST NEWS
+GTA VI MUSIC
 </a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     COUNTDOWN
-========================= -->
-
-<div class="countdown-container">
-
-<div class="countdown">
-
-<strong>
-GTA VI RELEASE COUNTDOWN
-</strong>
-
-<div class="timer">
-
-<div class="timer-box">
-
-<strong id="days">
-0
-</strong>
-
-<span>
-DAYS
-</span>
-
-</div>
-
-
-<div class="timer-box">
-
-<strong id="hours">
-0
-</strong>
-
-<span>
-HOURS
-</span>
-
-</div>
-
-
-<div class="timer-box">
-
-<strong id="minutes">
-0
-</strong>
-
-<span>
-MINUTES
-</span>
-
-</div>
-
-
-<div class="timer-box">
-
-<strong id="seconds">
-0
-</strong>
-
-<span>
-SECONDS
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     GLOBAL SEARCH
-========================= -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Search ViceBase
-</h2>
-
-<p>
-Find anything in the database.
-</p>
-
-</div>
-
-
-<div class="search-wrapper">
-
-<input
-id="globalSearch"
-class="global-search"
-placeholder="🔎 Search Jason, Lucia, Comet, Vice City..."
-autocomplete="off"
->
-
-<div
-id="searchResults"
-class="search-results"
->
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     STATS
-========================= -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-ViceBase Intel
-</h2>
-
-<p>
-Current database statistics.
-</p>
-
-</div>
-
-
-<div class="stats-grid">
-
-<div class="stat">
-
-<div
-class="stat-number"
-id="vehicleStat"
->
-12
-</div>
-
-<div class="stat-label">
-Vehicles
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-2
-</div>
-
-<div class="stat-label">
-Main Characters
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-31
-</div>
-
-<div class="stat-label">
-Locations
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-48
-</div>
-
-<div class="stat-label">
-Database Entries
-</div>
-
-</div>
 
 </div>
 
@@ -1454,82 +1290,96 @@ Latest information added to ViceBase.
 
 </div>
 
+<div class="music-grid">
 
-<div class="news-grid">
 
+<div class="music-card">
 
-<div class="news-card">
+<div class="music-image">
 
-<div class="news-image">
-🌴
+<img
+src="assets/locations/vice-city.jpg"
+alt="Vice City"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="news-content">
-
-<small>
-WORLD
-</small>
+<div class="music-info">
 
 <h3>
-Welcome to Leonida
+Vice City
 </h3>
 
-<p>
-Explore the world currently known from
-official GTA VI material.
+<p class="music-artist">
+Leonida
 </p>
 
-</div>
+<span class="tag tag-green">
+● OFFICIAL
+</span>
 
 </div>
 
-
-<div class="news-card">
-
-<div class="news-image">
-🚘
 </div>
 
-<div class="news-content">
 
-<small>
-DATABASE
-</small>
+<div class="music-card">
+
+<div class="music-image">
+
+<img
+src="assets/characters/lucia.jpg"
+alt="Lucia Caminos"
+onerror="this.style.display='none'"
+>
+
+</div>
+
+<div class="music-info">
 
 <h3>
-Vehicle Database
+Lucia Caminos
 </h3>
 
-<p>
-Cars, bikes, boats and other vehicles
-seen in official material.
+<p class="music-artist">
+Main protagonist
 </p>
 
-</div>
+<span class="tag tag-green">
+● OFFICIAL
+</span>
 
 </div>
 
-
-<div class="news-card">
-
-<div class="news-image">
-👩‍❤️‍👨
 </div>
 
-<div class="news-content">
 
-<small>
-CHARACTERS
-</small>
+<div class="music-card">
+
+<div class="music-image">
+
+<img
+src="assets/vehicles/cheetah.jpg"
+alt="Grotti Cheetah"
+onerror="this.style.display='none'"
+>
+
+</div>
+
+<div class="music-info">
 
 <h3>
-Jason & Lucia
+Grotti Cheetah
 </h3>
 
-<p>
-Everything currently known about
-the two protagonists.
+<p class="music-artist">
+1995 sports car
 </p>
+
+<span class="tag tag-green">
+● OFFICIAL
+</span>
 
 </div>
 
@@ -1558,7 +1408,7 @@ Database
 </h2>
 
 <p>
-Explore the ViceBase categories.
+Explore ViceBase.
 </p>
 
 </div>
@@ -1569,20 +1419,30 @@ Explore the ViceBase categories.
 
 <div
 class="database-card"
-onclick="showVehicles()"
+onclick="goTo('vehicles')"
 >
 
-<div class="database-icon">
-🚗
+<div class="database-image">
+
+<img
+src="assets/vehicles/cheetah.jpg"
+alt="Vehicles"
+onerror="this.style.display='none'"
+>
+
 </div>
+
+<div class="database-info">
 
 <b>
 Vehicles
 </b>
 
 <p>
-Cars & transportation
+Cars, bikes & boats
 </p>
+
+</div>
 
 </div>
 
@@ -1592,60 +1452,101 @@ class="database-card"
 onclick="goTo('characters')"
 >
 
-<div class="database-icon">
-👤
+<div class="database-image">
+
+<img
+src="assets/characters/jason.jpg"
+alt="Jason Duval"
+onerror="this.style.display='none'"
+>
+
 </div>
+
+<div class="database-info">
 
 <b>
 Characters
 </b>
 
 <p>
-Known characters
+Jason, Lucia & more
 </p>
 
 </div>
 
-
-<div class="database-card">
-
-<div class="database-icon">
-📍
 </div>
+
+
+<div
+class="database-card"
+onclick="goTo('map')"
+>
+
+<div class="database-image">
+
+<img
+src="assets/locations/vice-city.jpg"
+alt="Vice City"
+onerror="this.style.display='none'"
+>
+
+</div>
+
+<div class="database-info">
 
 <b>
 Locations
 </b>
 
 <p>
-Places & landmarks
+Vice City & Leonida
 </p>
+
+</div>
 
 </div>
 
 
 <div class="database-card">
 
-<div class="database-icon">
-🔫
+<div class="database-image">
+
+<img
+src="assets/weapons/revolver.jpg"
+alt="Revolver"
+onerror="this.style.display='none'"
+>
+
 </div>
+
+<div class="database-info">
 
 <b>
 Weapons
 </b>
 
 <p>
-Weapons database
+Known weapons
 </p>
+
+</div>
 
 </div>
 
 
 <div class="database-card">
 
-<div class="database-icon">
-🎬
+<div class="database-image">
+
+<img
+src="assets/locations/vice-city.jpg"
+alt="Missions"
+onerror="this.style.display='none'"
+>
+
 </div>
+
+<div class="database-info">
 
 <b>
 Missions
@@ -1657,107 +1558,39 @@ Story information
 
 </div>
 
-
-<div class="database-card">
-
-<div class="database-icon">
-🏪
-</div>
-
-<b>
-Businesses
-</b>
-
-<p>
-Businesses & activities
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     VEHICLES
-========================= -->
-
-<section id="vehicles">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-🚗 Vehicles
-</h2>
-
-<p>
-
-Vehicle database ·
-
-<span id="vehicleCount">
-12
-</span>
-
-results
-
-</p>
-
-</div>
-
-
-<div class="vehicle-tools">
-
-<input
-id="vehicleSearch"
-class="vehicle-search"
-placeholder="🔎 Search vehicles..."
->
-
-
-<button
-class="filter active"
-onclick="changeFilter('all', this)"
->
-All
-</button>
-
-
-<button
-class="filter"
-onclick="changeFilter('car', this)"
->
-Cars
-</button>
-
-
-<button
-class="filter"
-onclick="changeFilter('bike', this)"
->
-Bikes
-</button>
-
-
-<button
-class="filter"
-onclick="changeFilter('boat', this)"
->
-Boats
-</button>
-
 </div>
 
 
 <div
-id="vehicleList"
-class="vehicle-grid"
+class="database-card"
+onclick="goTo('music')"
 >
+
+<div class="database-image">
+
+<img
+src="assets/locations/vice-city.jpg"
+alt="Music"
+onerror="this.style.display='none'"
+>
+
+</div>
+
+<div class="database-info">
+
+<b>
+Music
+</b>
+
+<p>
+Songs & radio
+</p>
+
+</div>
+
+</div>
+
+
 </div>
 
 </div>
@@ -1780,7 +1613,7 @@ Characters
 </h2>
 
 <p>
-Known GTA VI characters.
+Officially revealed GTA VI characters.
 </p>
 
 </div>
@@ -1793,18 +1626,26 @@ Known GTA VI characters.
 
 <button
 class="favorite-button"
-onclick="toggleFavorite('Lucia')"
-data-favorite="Lucia"
+onclick="toggleFavorite('Jason Duval')"
+data-favorite="Jason Duval"
 >
 ☆
 </button>
 
-<div class="character-avatar">
-👩
+<div class="character-image">
+
+<img
+src="assets/characters/jason.jpg"
+alt="Jason Duval"
+onerror="this.style.display='none'"
+>
+
 </div>
 
+<div class="character-info">
+
 <h3>
-Lucia
+Jason Duval
 </h3>
 
 <p>
@@ -1812,9 +1653,11 @@ One of the two main protagonists
 of GTA VI.
 </p>
 
-<span class="intel intel-official">
+<span class="tag tag-green">
 ● OFFICIAL
 </span>
+
+</div>
 
 </div>
 
@@ -1823,18 +1666,26 @@ of GTA VI.
 
 <button
 class="favorite-button"
-onclick="toggleFavorite('Jason')"
-data-favorite="Jason"
+onclick="toggleFavorite('Lucia Caminos')"
+data-favorite="Lucia Caminos"
 >
 ☆
 </button>
 
-<div class="character-avatar">
-👨
+<div class="character-image">
+
+<img
+src="assets/characters/lucia.jpg"
+alt="Lucia Caminos"
+onerror="this.style.display='none'"
+>
+
 </div>
 
+<div class="character-info">
+
 <h3>
-Jason
+Lucia Caminos
 </h3>
 
 <p>
@@ -1842,31 +1693,11 @@ One of the two main protagonists
 of GTA VI.
 </p>
 
-<span class="intel intel-official">
+<span class="tag tag-green">
 ● OFFICIAL
 </span>
 
 </div>
-
-
-<div class="character-card">
-
-<div class="character-avatar">
-❔
-</div>
-
-<h3>
-Unknown Character
-</h3>
-
-<p>
-Information will be added when
-officially confirmed.
-</p>
-
-<span class="intel intel-rumor">
-● RUMOR
-</span>
 
 </div>
 
@@ -1879,29 +1710,111 @@ officially confirmed.
 
 
 <!-- =========================
-     FAVORITES
+     VEHICLES
 ========================= -->
 
-<section id="favorites">
+<section id="vehicles">
 
 <div class="container">
 
 <div class="section-title">
 
 <h2>
-⭐ Favorites
+Vehicles
 </h2>
 
 <p>
-Your saved ViceBase entries.
+Officially revealed vehicles.
 </p>
 
 </div>
 
 
+<div class="vehicle-tools">
+
+<input
+id="vehicleSearch"
+class="vehicle-search"
+placeholder="Search vehicles..."
+>
+
+<button
+class="filter active"
+onclick="filterVehicles('all',this)"
+>
+All
+</button>
+
+<button
+class="filter"
+onclick="filterVehicles('car',this)"
+>
+Cars
+</button>
+
+<button
+class="filter"
+onclick="filterVehicles('bike',this)"
+>
+Bikes
+</button>
+
+<button
+class="filter"
+onclick="filterVehicles('boat',this)"
+>
+Boats
+</button>
+
+</div>
+
+
 <div
-id="favoriteList"
-class="favorite-list"
+id="vehicleList"
+class="vehicle-grid"
+>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<section id="music">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+GTA VI Music
+</h2>
+
+<p>
+Songs featured in official GTA VI material.
+</p>
+
+</div>
+
+
+<div class="vehicle-tools">
+
+<input
+id="musicSearch"
+class="music-search"
+placeholder="Search songs or artists..."
+>
+
+</div>
+
+
+<div
+id="musicList"
+class="music-grid"
 >
 </div>
 
@@ -1921,11 +1834,11 @@ class="favorite-list"
 <div class="section-title">
 
 <h2>
-Interactive Map
+Vice City Map
 </h2>
 
 <p>
-The future map system of ViceBase.
+Official GTA VI locations.
 </p>
 
 </div>
@@ -1933,15 +1846,25 @@ The future map system of ViceBase.
 
 <div class="map">
 
+<img
+src="assets/locations/vice-city.jpg"
+alt="Vice City"
+onerror="this.style.display='none'"
+>
+
+<div class="map-overlay">
+
 <div>
 
 <h3>
-🌴 Vice City
+VICE CITY
 </h3>
 
 <p>
-Interactive map coming soon.
+Only in Leonida.
 </p>
+
+</div>
 
 </div>
 
@@ -1968,35 +1891,74 @@ Independent GTA VI fan project.
 
 <br>
 
-Not affiliated with Rockstar Games.
+Grand Theft Auto and related
+materials belong to Rockstar Games.
+
+<br><br>
+
+© Rockstar Games. All rights reserved.
 
 </footer>
 
 
 <!-- =========================
-     MOBILE NAVIGATION
+     MOBILE NAV
 ========================= -->
 
 <div class="mobile-nav">
 
 <a href="#news">
-<span>⌂</span>
+
+<span>
+⌂
+</span>
+
 Home
+
 </a>
+
 
 <a href="#database">
-<span>🗃️</span>
+
+<span>
+▦
+</span>
+
 Database
+
 </a>
 
-<a href="#favorites">
-<span>⭐</span>
-Favorites
+
+<a href="#music">
+
+<span>
+♫
+</span>
+
+Music
+
 </a>
+
+
+<a href="#characters">
+
+<span>
+◉
+</span>
+
+Characters
+
+</a>
+
 
 <a href="#map">
-<span>🗺️</span>
+
+<span>
+▣
+</span>
+
 Map
+
 </a>
 
 </div>
@@ -2005,211 +1967,105 @@ Map
 <script>
 
 /* =========================
-   COUNTDOWN
-========================= */
-
-const releaseDate =
-new Date("2026-11-19T00:00:00");
-
-
-function updateCountdown() {
-
-    let difference =
-        releaseDate - new Date();
-
-
-    if (difference < 0) {
-        difference = 0;
-    }
-
-
-    const days =
-        Math.floor(
-            difference / 86400000
-        );
-
-
-    const hours =
-        Math.floor(
-            difference % 86400000
-            / 3600000
-        );
-
-
-    const minutes =
-        Math.floor(
-            difference % 3600000
-            / 60000
-        );
-
-
-    const seconds =
-        Math.floor(
-            difference % 60000
-            / 1000
-        );
-
-
-    document.getElementById("days")
-        .textContent = days;
-
-
-    document.getElementById("hours")
-        .textContent = hours;
-
-
-    document.getElementById("minutes")
-        .textContent = minutes;
-
-
-    document.getElementById("seconds")
-        .textContent = seconds;
-
-}
-
-
-updateCountdown();
-
-setInterval(
-    updateCountdown,
-    1000
-);
-
-
-/* =========================
    VEHICLES
 ========================= */
 
 const vehicles = [
 
-    {
-        name: "Comet",
-        type: "Sports Car",
-        category: "car",
-        icon: "🏎️",
-        intel: "OFFICIAL"
-    },
+{
+    name:
+        "’95 Grotti Cheetah",
 
-    {
-        name: "Buffalo",
-        type: "Muscle Car",
-        category: "car",
-        icon: "🚘",
-        intel: "OBSERVED"
-    },
+    type:
+        "Sports Car",
 
-    {
-        name: "Sultan",
-        type: "Sports Sedan",
-        category: "car",
-        icon: "🚗",
-        intel: "REPORTED"
-    },
+    category:
+        "car",
 
-    {
-        name: "Baller",
-        type: "SUV",
-        category: "car",
-        icon: "🚙",
-        intel: "OBSERVED"
-    },
+    image:
+        "assets/vehicles/cheetah.jpg"
+},
 
-    {
-        name: "Pickup",
-        type: "Pickup Truck",
-        category: "car",
-        icon: "🛻",
-        intel: "RUMOR"
-    },
+{
+    name:
+        "’67 Vapid Dominator Buggy",
 
-    {
-        name: "Supercar",
-        type: "Super Car",
-        category: "car",
-        icon: "🏎️",
-        intel: "RUMOR"
-    },
+    type:
+        "Off-Road Vehicle",
 
-    {
-        name: "Sport Bike",
-        type: "Motorcycle",
-        category: "bike",
-        icon: "🏍️",
-        intel: "OBSERVED"
-    },
+    category:
+        "car",
 
-    {
-        name: "Chopper",
-        type: "Cruiser",
-        category: "bike",
-        icon: "🏍️",
-        intel: "RUMOR"
-    },
+    image:
+        "assets/vehicles/dominator.jpg"
+},
 
-    {
-        name: "Dirt Bike",
-        type: "Off-Road Bike",
-        category: "bike",
-        icon: "🏍️",
-        intel: "RUMOR"
-    },
+{
+    name:
+        "Dinka Enduro",
 
-    {
-        name: "Speed Boat",
-        type: "Boat",
-        category: "boat",
-        icon: "🚤",
-        intel: "OBSERVED"
-    },
+    type:
+        "Motorcycle",
 
-    {
-        name: "Yacht",
-        type: "Luxury Boat",
-        category: "boat",
-        icon: "🛥️",
-        intel: "RUMOR"
-    },
+    category:
+        "bike",
 
-    {
-        name: "Jetski",
-        type: "Watercraft",
-        category: "boat",
-        icon: "🚤",
-        intel: "RUMOR"
-    }
+    image:
+        "assets/vehicles/enduro.jpg"
+},
+
+{
+    name:
+        "Shitzu Squalo",
+
+    type:
+        "Speedboat",
+
+    category:
+        "boat",
+
+    image:
+        "assets/vehicles/squalo.jpg"
+}
 
 ];
 
 
-let currentFilter = "all";
+let currentFilter =
+    "all";
 
 
 function renderVehicles() {
 
-    const search =
+    const query =
         document
-        .getElementById("vehicleSearch")
+        .getElementById(
+            "vehicleSearch"
+        )
         .value
         .toLowerCase();
 
 
-    const filtered =
+    const list =
         vehicles.filter(vehicle => {
 
             const matchesSearch =
                 vehicle.name
                 .toLowerCase()
-                .includes(search);
+                .includes(query);
 
 
             const matchesFilter =
                 currentFilter === "all"
                 ||
-                vehicle.category === currentFilter;
+                vehicle.category ===
+                    currentFilter;
 
 
-            return matchesSearch &&
-                matchesFilter;
+            return (
+                matchesSearch &&
+                matchesFilter
+            );
 
         });
 
@@ -2223,35 +2079,11 @@ function renderVehicles() {
     container.innerHTML = "";
 
 
-    filtered.forEach(vehicle => {
+    list.forEach(vehicle => {
 
-        const card =
-            document.createElement(
-                "div"
-            );
+        container.innerHTML += `
 
-
-        card.className =
-            "vehicle-card";
-
-
-        const intelClass =
-            vehicle.intel === "OFFICIAL"
-            ?
-            "intel-official"
-            :
-            vehicle.intel === "OBSERVED"
-            ?
-            "intel-observed"
-            :
-            vehicle.intel === "REPORTED"
-            ?
-            "intel-reported"
-            :
-            "intel-rumor";
-
-
-        card.innerHTML = `
+        <div class="vehicle-card">
 
             <button
                 class="favorite-button"
@@ -2263,7 +2095,10 @@ function renderVehicles() {
 
             <div class="vehicle-image">
 
-                ${vehicle.icon}
+                <img
+                    src="${vehicle.image}"
+                    alt="${vehicle.name}"
+                >
 
             </div>
 
@@ -2277,32 +2112,19 @@ function renderVehicles() {
                     ${vehicle.type}
                 </p>
 
-                <span
-                    class="intel ${intelClass}"
-                >
-                    ● ${vehicle.intel}
+                <br>
+
+                <span class="tag tag-green">
+                    ● OFFICIAL
                 </span>
 
             </div>
 
+        </div>
+
         `;
 
-
-        container.appendChild(card);
-
     });
-
-
-    document.getElementById(
-        "vehicleCount"
-    ).textContent =
-        filtered.length;
-
-
-    document.getElementById(
-        "vehicleStat"
-    ).textContent =
-        vehicles.length;
 
 
     updateFavoriteButtons();
@@ -2310,7 +2132,7 @@ function renderVehicles() {
 }
 
 
-function changeFilter(
+function filterVehicles(
     filter,
     button
 ) {
@@ -2322,37 +2144,14 @@ function changeFilter(
     document
         .querySelectorAll(".filter")
         .forEach(
-            element =>
-                element.classList
-                    .remove("active")
+            b =>
+                b.classList
+                .remove("active")
         );
 
 
-    button.classList.add(
-        "active"
-    );
-
-
-    renderVehicles();
-
-}
-
-
-function showVehicles() {
-
-    const section =
-        document.getElementById(
-            "vehicles"
-        );
-
-
-    section.style.display =
-        "block";
-
-
-    section.scrollIntoView({
-        behavior: "smooth"
-    });
+    button.classList
+        .add("active");
 
 
     renderVehicles();
@@ -2361,7 +2160,9 @@ function showVehicles() {
 
 
 document
-    .getElementById("vehicleSearch")
+    .getElementById(
+        "vehicleSearch"
+    )
     .addEventListener(
         "input",
         renderVehicles
@@ -2372,186 +2173,167 @@ renderVehicles();
 
 
 /* =========================
-   GLOBAL SEARCH
+   MUSIC
 ========================= */
 
-const searchDatabase = [
+const music = [
 
-    ...vehicles.map(vehicle => ({
-        name: vehicle.name,
-        category: "Vehicle",
-        description: vehicle.type,
-        action: "vehicles"
-    })),
+{
+    title:
+        "Se Me Nota",
 
-    {
-        name: "Jason",
-        category: "Character",
-        description: "Main protagonist",
-        action: "characters"
-    },
+    artist:
+        "Lele Pons",
 
-    {
-        name: "Lucia",
-        category: "Character",
-        description: "Main protagonist",
-        action: "characters"
-    },
+    source:
+        "GTA VI Trailer 2",
 
-    {
-        name: "Vice City",
-        category: "Location",
-        description: "Main setting",
-        action: "map"
-    },
+    image:
+        "assets/music/se-me-nota.jpg"
+},
 
-    {
-        name: "Leonida",
-        category: "Region",
-        description: "GTA VI state",
-        action: "map"
-    }
+{
+    title:
+        "GTA VI Trailer Music",
+
+    artist:
+        "Official GTA VI Material",
+
+    source:
+        "Trailer",
+
+    image:
+        "assets/music/trailer.jpg"
+}
 
 ];
 
 
-const globalSearch =
-    document.getElementById(
-        "globalSearch"
-    );
+function renderMusic() {
+
+    const query =
+        document
+        .getElementById(
+            "musicSearch"
+        )
+        .value
+        .toLowerCase();
 
 
-const searchResults =
-    document.getElementById(
-        "searchResults"
-    );
+    const list =
+        music.filter(track =>
 
-
-globalSearch.addEventListener(
-    "input",
-    function() {
-
-        const query =
-            this.value
-            .toLowerCase()
-            .trim();
-
-
-        if (!query) {
-
-            searchResults.style.display =
-                "none";
-
-            return;
-        }
-
-
-        const results =
-            searchDatabase
-            .filter(item =>
-                item.name
+            track.title
                 .toLowerCase()
                 .includes(query)
-            )
-            .slice(0, 7);
+
+            ||
+
+            track.artist
+                .toLowerCase()
+                .includes(query)
+
+        );
 
 
-        if (!results.length) {
+    const container =
+        document.getElementById(
+            "musicList"
+        );
 
-            searchResults.innerHTML = `
 
-                <div class="search-result">
+    container.innerHTML = "";
 
-                    <b>
-                        Nothing found
-                    </b>
 
-                    <p>
-                        Try another search.
-                    </p>
+    list.forEach(track => {
+
+        container.innerHTML += `
+
+        <div class="music-card">
+
+            <button
+                class="favorite-button"
+                onclick="toggleFavorite('${track.title}')"
+                data-favorite="${track.title}"
+            >
+                ☆
+            </button>
+
+            <div class="music-image">
+
+                <img
+                    src="${track.image}"
+                    alt="${track.title}"
+                >
+
+            </div>
+
+            <div class="music-info">
+
+                <h3>
+                    ${track.title}
+                </h3>
+
+                <div class="music-artist">
+                    ${track.artist}
+                </div>
+
+                <div class="music-meta">
+
+                    <span class="tag tag-pink">
+                        🎬 ${track.source}
+                    </span>
+
+                    <span class="tag tag-green">
+                        ● OFFICIAL
+                    </span>
 
                 </div>
 
-            `;
+            </div>
 
-        } else {
+        </div>
 
-            searchResults.innerHTML =
-                results.map(item => `
+        `;
 
-                    <div
-                        class="search-result"
-                        onclick="openSearchResult('${item.action}')"
-                    >
-
-                        <small>
-                            ${item.category}
-                        </small>
-
-                        <b>
-                            ${item.name}
-                        </b>
-
-                        <p>
-                            ${item.description}
-                        </p>
-
-                    </div>
-
-                `).join("");
-
-        }
+    });
 
 
-        searchResults.style.display =
-            "block";
-
-    }
-);
-
-
-function openSearchResult(
-    destination
-) {
-
-    searchResults.style.display =
-        "none";
-
-
-    globalSearch.value =
-        "";
-
-
-    if (destination === "vehicles") {
-
-        showVehicles();
-
-        return;
-    }
-
-
-    goTo(destination);
+    updateFavoriteButtons();
 
 }
+
+
+document
+    .getElementById(
+        "musicSearch"
+    )
+    .addEventListener(
+        "input",
+        renderMusic
+    );
+
+
+renderMusic();
 
 
 /* =========================
    NAVIGATION
 ========================= */
 
-function goTo(
-    id
-) {
+function goTo(id) {
 
     const element =
         document.getElementById(id);
 
 
-    if (!element) return;
+    if (!element)
+        return;
 
 
     element.scrollIntoView({
-        behavior: "smooth"
+        behavior:
+            "smooth"
     });
 
 }
@@ -2572,33 +2354,20 @@ function getFavorites() {
 }
 
 
-function saveFavorites(
-    favorites
-) {
-
-    localStorage.setItem(
-        "vicebaseFavorites",
-        JSON.stringify(
-            favorites
-        )
-    );
-
-}
-
-
-function toggleFavorite(
-    name
-) {
+function toggleFavorite(name) {
 
     let favorites =
         getFavorites();
 
 
-    if (favorites.includes(name)) {
+    if (
+        favorites.includes(name)
+    ) {
 
         favorites =
             favorites.filter(
-                item => item !== name
+                item =>
+                    item !== name
             );
 
     } else {
@@ -2608,14 +2377,15 @@ function toggleFavorite(
     }
 
 
-    saveFavorites(
-        favorites
+    localStorage.setItem(
+        "vicebaseFavorites",
+        JSON.stringify(
+            favorites
+        )
     );
 
 
     updateFavoriteButtons();
-
-    renderFavorites();
 
 }
 
@@ -2643,18 +2413,16 @@ function updateFavoriteButtons() {
                 button.textContent =
                     "★";
 
-                button.classList.add(
-                    "active"
-                );
+                button.classList
+                    .add("active");
 
             } else {
 
                 button.textContent =
                     "☆";
 
-                button.classList.remove(
-                    "active"
-                );
+                button.classList
+                    .remove("active");
 
             }
 
@@ -2663,160 +2431,11 @@ function updateFavoriteButtons() {
 }
 
 
-function renderFavorites() {
-
-    const container =
-        document.getElementById(
-            "favoriteList"
-        );
-
-
-    const favorites =
-        getFavorites();
-
-
-    if (!favorites.length) {
-
-        container.innerHTML = `
-
-            <div class="favorites-empty">
-
-                <div style="font-size:40px">
-                    ☆
-                </div>
-
-                <br>
-
-                No favorites yet.
-
-                <br>
-
-                <small>
-                    Tap ☆ on a database entry
-                    to save it here.
-                </small>
-
-            </div>
-
-        `;
-
-        return;
-    }
-
-
-    container.innerHTML =
-        favorites.map(name => {
-
-            const vehicle =
-                vehicles.find(
-                    item =>
-                        item.name === name
-                );
-
-
-            if (vehicle) {
-
-                return `
-
-                    <div class="vehicle-card">
-
-                        <div class="vehicle-image">
-                            ${vehicle.icon}
-                        </div>
-
-                        <div class="vehicle-info">
-
-                            <h3>
-                                ${vehicle.name}
-                            </h3>
-
-                            <p>
-                                ${vehicle.type}
-                            </p>
-
-                            <button
-                                class="filter"
-                                onclick="toggleFavorite('${vehicle.name}')"
-                                style="margin-top:12px"
-                            >
-                                Remove
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                `;
-
-            }
-
-
-            return `
-
-                <div class="vehicle-card">
-
-                    <div class="vehicle-image">
-                        👤
-                    </div>
-
-                    <div class="vehicle-info">
-
-                        <h3>
-                            ${name}
-                        </h3>
-
-                        <p>
-                            Character
-                        </p>
-
-                        <button
-                            class="filter"
-                            onclick="toggleFavorite('${name}')"
-                            style="margin-top:12px"
-                        >
-                            Remove
-                        </button>
-
-                    </div>
-
-                </div>
-
-            `;
-
-        }).join("");
-
-
-}
-
-
-renderFavorites();
-
 updateFavoriteButtons();
-
-
-/* =========================
-   CLOSE SEARCH
-========================= */
-
-document.addEventListener(
-    "click",
-    function(event) {
-
-        if (
-            !event.target.closest(
-                ".search-wrapper"
-            )
-        ) {
-
-            searchResults.style.display =
-                "none";
-
-        }
-
-    }
-);
 
 </script>
 
+
 </body>
+
 </html>
